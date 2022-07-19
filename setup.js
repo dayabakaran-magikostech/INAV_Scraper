@@ -1,0 +1,1 @@
+exports.selectorForINAVTable = '#js-main-container > section.main-container.container > div > section.instrument.js-section-content > section.js-table-wrapper.common-table-comp.scroll-view > div.common-table-wrapper > div > table > tbody > tr';
