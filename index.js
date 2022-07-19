@@ -14,7 +14,7 @@ app.post('/fetch-inav-data', async function (req, res)
 	{
 		const sectors = Object.keys(req.body.urls); // getting keys from body > urls
 		const urls = Object.values(req.body.urls); // getting urls from body > urls
-		if(sectors.length >=1 && urls.length >= 1) // checking if any user has passed atleast 1 url
+		if(sectors.length >=1 && urls.length >= 1) // checking if user has passed atleast 1 url
 		{
 			const result = await inavScrapper(sectors, urls); // invoking scrapper function by passing values and urls as arguments
 			if(result)
