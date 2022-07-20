@@ -10,7 +10,7 @@ exports.inavScrapper = async (sectors, urls) => {
 	for (url of urls) // looping through urls
 	{
 		const page = await browser.newPage();
-		await page.goto(url,  {waitUntil: 'networkidle0', timeout: 60000}); // opening webpage (here timeout is in miliseconds)
+		await page.goto(url,  {waitUntil: 'networkidle0', timeout: 0}); // opening webpage (here timeout is in miliseconds)
 		await page.waitForSelector(selectorForINAVTable).catch(error => { 
 			console.log("Error occurred while searching for the element: "+error.message);
 			browser.close();
